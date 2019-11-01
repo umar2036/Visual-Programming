@@ -96,7 +96,7 @@ namespace ConsoleApplication8
             if (flag == 1)
             {
                 using (System.IO.StreamWriter file =
-                new System.IO.StreamWriter(@"C:\umar\Data.txt", false))
+                new System.IO.StreamWriter(@"C:\Users\Umar\Documents\Visual Studio 2015\Projects\ConsoleApplication8\ConsoleApplication8\Data.txt", false))
                 {
                     for (int i = 0; i < _students.Length; i++)
                     {
@@ -139,7 +139,7 @@ namespace ConsoleApplication8
                     Console.Write("Enter University: ");
                     obj.university = Console.ReadLine();
                     using (System.IO.StreamWriter file =
-                    new System.IO.StreamWriter(@"C:\umar\Data.txt", true))
+                    new System.IO.StreamWriter(@"Data.txt", true))
                     {
                         file.WriteLine(obj.id);
                         file.WriteLine(obj.name);
@@ -168,7 +168,6 @@ namespace ConsoleApplication8
         {
             double[] arr = new double[_students.Length];
             double temp;
-            //double gpa;
             if (_students.Length>2)
             {
                for (int i = 0; i < _students.Length; i++)
@@ -231,7 +230,7 @@ namespace ConsoleApplication8
             Console.WriteLine("\t\t|Id   |    Name   |   Attendance  |");
             Console.WriteLine("\t\t|_____|___________|_______________|");
             using (System.IO.StreamWriter file =
-            new System.IO.StreamWriter(@"C:\umar\Data.txt", false))
+            new System.IO.StreamWriter(@"C:\Users\Umar\Documents\Visual Studio 2015\Projects\ConsoleApplication8\ConsoleApplication8\Data.txt", false))
             {
                 for (int i = 0; i < _students.Length; i++)
                 {
@@ -327,7 +326,7 @@ namespace ConsoleApplication8
         }
         public void studentPrintAttendance(Student[] arr,int i)
         {
-            //Console.WriteLine(arr[i].id + "       " + arr[i].name + "       " + arr[i].attendance);
+            
             Console.Write("\t\t|{0,3:G}  |", _students[i].id);
             Console.Write("{0,9:G}  |    ", _students[i].name);
             Console.WriteLine("{0,7:G}    |", _students[i].attendance);
@@ -349,7 +348,7 @@ namespace ConsoleApplication8
        
         public void reading()
         {
-            string[] lines = System.IO.File.ReadAllLines(@"C:\umar\Data.txt");
+            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Umar\Documents\Visual Studio 2015\Projects\ConsoleApplication8\ConsoleApplication8\Data.txt");
             int noOfStudents = lines.Length / 6;
             int index = 0;
             Console.WriteLine(lines.Length);
